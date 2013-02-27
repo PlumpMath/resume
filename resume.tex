@@ -6,16 +6,20 @@
 \textheight=10in
 \pagestyle{empty}
 
+
 \hypersetup{
     colorlinks=true,
     urlcolor=blue
 }
 
+
 %\raggedbottom
 \raggedright
 
+
 %  \renewcommand{\encodingdefault}{cg}
   %\renewcommand{\rmdefault}{lgrcmr}
+
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 % definitions for resume
@@ -31,22 +35,23 @@
 \vspace*{-8pt}
 \begin{center}
 {\large \scshape {#1}}\\
-#2 \lineunder 
+#2 \lineunder
 #3
 \end{center}
 \vspace*{-8pt}
 }
 \newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
 \newcommand{\schoolwithcourses}[4]{
- \textbf{#1} (#2) \\ #3 \hfill #4 \\ 
+ \textbf{#1} (#2) \\ #3 \hfill #4 \\
  Selected Coursework:\\
 \vspace*{5pt}
 }
 \newcommand{\school}[4]{
- \textbf{#1} #2 $\bullet$ #3\\ 
+ \textbf{#1} #2 $\bullet$ #3\\
 #4 \\
 }
 % end resume definitions
+
 
 \begin{document}
 \small
@@ -54,6 +59,7 @@
 \vspace*{-44pt}
 \contact{Christian Maher}
 {maher.cs@gmail.com $\bullet$ 484-347-1573 $\bullet$ Arlington, VA}
+
 
 \header{Work History}
 \employer{Lockheed Martin}{August 2012---Present}{Software Engineer Asc.}
@@ -64,6 +70,7 @@
     \item Encourage and assist in adherence to JSLint-compatible coding standards to enhance project maintainability
     \end{achievements}
 
+
 \employer{Applied Research Lab}{May 2010---July 2012}{Software Engineer Intern}
     \begin{achievements}
     \item Lead project requiring conversion and deployment of existing Java software to the web as an applet with native library distribution and JavaScript interaction
@@ -72,8 +79,9 @@
     \item Developed visual analytic software using Java 3D for use in CAVE and other 3D environments
     \end{achievements}
 
+
 \header{Education}
-\schoolwithcourses{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor} 
+\schoolwithcourses{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor}
 {Cumulative GPA: 3.48/4.00}
     \area{Computer Science}{Systems Programming $\cdot$ Operating Systems $\cdot$  Data Structures and Algorithms
         $\cdot$ Automata $\cdot$ Network Security $\cdot$ Programming Language Concepts $\cdot$ Machine Learning}
@@ -88,6 +96,16 @@
     \item Interprets the AST in a Ruby-powered runtime environment to process states, stepping through non-deterministic branches in parallel
     \end{achievements}
 
+
+\project{Bandit}{https://github.com/cmaher/bandit}{Ruby}
+    \begin{achievements}
+    \item Multi-armed bandit framework for Rails; forked from bmuller/bandit
+    \item Provided Softmax algorithm implementation
+    \item Added support for cascading configuration options
+    \item Contributed documentation and tests for developed features
+    \end{achievements}
+
+    
 \project{SGAS}{https://github.com/cmaher/sgas}{Java}
     \begin{achievements}
     \item A simple game to teach basic principles of game architecture and development
@@ -95,12 +113,14 @@
     \item Decouples the main game engine for reuse by other students
     \end{achievements}
 
+
 \project{Biscuit}{https://github.com/PennState-ACM/PennState-ACM-Biscuit}{C}
     \begin{achievements}
-    \item An API for the iRobot Create to simplify programming 
+    \item An API for the iRobot Create to simplify programming
     \item Created code for initialization and buffer communication
     \item Provided API design guidance
     \end{achievements}
+
 
 \activity{Penn State ACM Student Chapter Vice President}{Spring 2011---Spring 2012}
     \begin{achievements}
@@ -110,11 +130,12 @@
     \item Worked to connect students with companies and employment opportunities
     \end{achievements}
 
+
 \header{Skills}
     \skill{Programming Languages}{C $\cdot$ C++ $\cdot$ C\# $\cdot$ Java $\cdot$ JavaScript $\cdot$ CoffeeScript  
         $\cdot$ Ruby $\cdot$ Python $\cdot$ Scala $\cdot$ Haskell $\cdot$ Perl $\cdot$ Lua $\cdot$ PHP}
-    \skill{Technologies}{SQL $\cdot$ MongoDB $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ AJAX $\cdot$ JSON 
+    \skill{Technologies}{SQL $\cdot$ MongoDB $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ AJAX $\cdot$ JSON
         $\cdot$ XML $\cdot$ Ant $\cdot$ .NET $\cdot$ ASP.NET $\cdot$ Android}
 
-\vspace*{44pt}
+
 \end{document}
