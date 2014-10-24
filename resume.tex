@@ -24,7 +24,7 @@
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 % definitions for resume
 \newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1:}   #2 \end{verse}  }
-\newcommand{\skill}[2]{\textbf{#1:}  \begin{verse}#2\end{verse} }
+\newcommand{\skill}[1]{\begin{verse}#1\end{verse} }
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
 \newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
 \newcommand{\employer}[3]{{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }}
@@ -35,7 +35,7 @@
 \vspace*{-8pt}
 \begin{center}
 {\large \scshape {#1}}\\
-#2 
+#2
 \vspace*{2pt}
 \lineunder
 #3
@@ -43,14 +43,9 @@
 \vspace*{-8pt}
 }
 \newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
-\newcommand{\schoolwithcourses}[4]{
- \textbf{#1} (#2) \\ #3 \hfill #4 \\
- Selected Coursework:\\
-\vspace*{5pt}
-}
 \newcommand{\school}[4]{
- \textbf{#1} #2 $\bullet$ #3\\
-#4 \\
+ \textbf{#1} (#2) \\ #3 \hfill #4 \\
+\vspace*{5pt}
 }
 % end resume definitions
 
@@ -64,38 +59,43 @@
 
 
 \header{Work History}
-\employer{Lockheed Martin}{August 2012---Present}{Software Engineer Asc.}
+\employer{Conductor}{May 2013--Present}{Software Engineer}
     \begin{achievements}
-    \item Use JavaScript, CSS, C\#, and ASP.NET for development of dynamic database-backed web pages
-    \item Optimize speed of web content delivery through testing, profiling, and experimentation
-    \item Foster behavior-driven-development and implement framework to ensure project stability
-    \item Propose and develop new features to enhance site usability and improve user experience
-    \item Encourage and assist in adherence to coding standards to enhance project maintainability
-    \item Provide scripts for automation of common repetitive tasks
+    \item Pioneer new client-side architecture for large-scale web app, prioritizing ease of development and maintainability
+    \item Write exercises and documentation for new hire training and general knowledge sharing
+    \item Provide tools and scripts to enable customer support and reduce strain for on-call engineer
+    \end{achievements}
+
+\employer{Lockheed Martin}{August 2012---May 2013}{Software Engineer Asc.}
+    \begin{achievements}
+    \item Used JavaScript, CSS, C\#, and ASP.NET for development of dynamic database-backed web pages
+    \item Optimized speed of web content delivery through testing and profiling
+    \item Developed behavior-driven-development library to help ensure project stability
+    \item Encouraged and assisted in adherence to coding standards to enhance project maintainability
+    \item Provided scripts for automation of common repetitive tasks
     \end{achievements}
 
 
 \employer{Applied Research Lab}{May 2010---July 2012}{Software Engineer Intern}
     \begin{achievements}
     \item Led project requiring conversion and deployment of existing Java software to the web as an applet with native library distribution and JavaScript interaction
-    \item Managed a MongoDB database for data aggregation and analysis
-    \item Maintained a Tomcat server with the Ozone Widget Framework for testing software integration
     \item Developed visual analytic software using Java 3D for use in CAVE and other 3D environments
+    \item Contributed to jReality, a library for Java CAVE development
     \end{achievements}
 
 
 \header{Education}
-\schoolwithcourses{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor}
+\school{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor}
 {Cumulative GPA: 3.48/4.00}
-    \area{Computer Science}{Systems Programming $\cdot$ Operating Systems $\cdot$  Data Structures and Algorithms
-        $\cdot$ Automata $\cdot$ Network Security $\cdot$ Programming Language Concepts $\cdot$ Machine Learning}
-    \area{Mathematics}{Multivariable Calculus $\cdot$ Ordinary and Partial Differential Equations
-        $\cdot$ Linear Algebra }
-        
-\header{Projects and Activities}
 
-\project{Website}{http://cmaher.github.io}{}
-\vspace{2pt}
+\header{Projects}
+
+\project{backbone.hoard}{https://github.com/cmaher/backbone.hoard}{JavaScript}
+    \begin{achievements}
+    \item A configurable solution for client-side caching and duplicate XHR consolidation
+    \item Uses localStorage to cache server responses, but can be configured to use any web-based store
+    \item Developed to support a system making potentially many duplicate XHRs in short succession
+    \end{achievements}
 
 \project{Flexsym}{https://github.com/cmaher/flexsym}{Ruby}
     \begin{achievements}
@@ -104,6 +104,13 @@
     \item Interprets the AST in a Ruby-powered runtime environment to process states, stepping through non-deterministic branches in parallel
     \end{achievements}
 
+\project{backbone.marionette}{https://github.com/marionettejs/backbone.marionette}{JavaScript}
+    \begin{achievements}
+    \item The Backbone Framework. A set of libraries and patterns for easier Backbone application development
+    \item Contribute code and discussion of future development
+    \item Assist the community on the gitter and at Marionette Meetups
+    \item Working on Chrome DevTools extension for inspecting Marionette applications (\url{https://github.com/MarionetteLabs/marionette.inspector})
+    \end{achievements}
 
 \project{Bandit}{https://github.com/cmaher/bandit}{Ruby}
     \begin{achievements}
@@ -113,7 +120,7 @@
     \item Contributed documentation and tests for developed features
     \end{achievements}
 
-    
+
 \project{SGAS}{https://github.com/cmaher/sgas}{Java}
     \begin{achievements}
     \item A simple game to teach basic principles of game architecture and development
@@ -129,21 +136,10 @@
     \item Provided API design guidance
     \end{achievements}
 
-
-\activity{Penn State ACM Student Chapter Vice President}{Spring 2011---Spring 2012}
-    \begin{achievements}
-    \item Hosted a local ACM ICPC-style programming competition
-    \item Prepared members for the official ACM ICPC programming competition
-    \item Presented workshops on tools, technologies, and career development
-    \item Worked to connect students with companies and employment opportunities
-    \end{achievements}
-
-
-\header{Skills}
-    \skill{Programming Languages}{C $\cdot$ C++ $\cdot$ C\# $\cdot$ Java $\cdot$ JavaScript $\cdot$ CoffeeScript  
-        $\cdot$ Ruby $\cdot$ Python $\cdot$ Scala $\cdot$ Haskell $\cdot$ Perl $\cdot$ Lua $\cdot$ PHP}
-    \skill{Technologies}{SQL $\cdot$ MongoDB $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ AJAX $\cdot$ JSON
-        $\cdot$ XML $\cdot$ Ant $\cdot$ Rails $\cdot$ .NET $\cdot$ ASP.NET $\cdot$ Android}
+\header{Skills and Interests (For the Robots)}
+    \skill{JavaScript $\cdot$ Ruby $\cdot$ Java $\cdot$ Scala $\cdot$ Haskell
+      $\cdot$ SQL $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ Backbone $\cdot$ Marionette
+      $\cdot$ Rails }
 
 
 \end{document}
