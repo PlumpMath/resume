@@ -21,12 +21,12 @@
   %\renewcommand{\rmdefault}{lgrcmr}
 
 
-\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+\def\bull{\vrule height 0.9ex width .7ex depth -.1ex }
 % definitions for resume
 \newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1:}   #2 \end{verse}  }
 \newcommand{\skill}[1]{\begin{verse}#1\end{verse} }
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
-\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{8pt} \textsc{#1}} \vspace*{-4pt} \lineunder}
 \newcommand{\employer}[3]{{ \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }}
 \newcommand{\project}[3]{{ \textbf{#1} (\url{#2}) \hfill \textit{#3} \\ }}
 \newcommand{\activity}[2]{{ \textbf{#1} (#2) \hfill \\ }}
@@ -37,12 +37,11 @@
 {\large \scshape {#1}}\\
 #2
 \vspace*{2pt}
-\lineunder
 #3
 \end{center}
-\vspace*{-8pt}
+\vspace*{-4pt}
 }
-\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep .5pt}}{\vspace*{4pt}\end{list}}
 \newcommand{\school}[4]{
  \textbf{#1} (#2) \\ #3 \hfill #4 \\
 \vspace*{5pt}
@@ -53,22 +52,26 @@
 \begin{document}
 \small
 \smallskip
-\vspace*{-78pt}
+\vspace*{-66pt}
 \contact{Christian Maher}
 {maher.cs@gmail.com $\bullet$ 484-347-1573}
 
 
 \header{Work History}
-\employer{Conductor}{May 2013--Present}{Software Engineer}
+\employer{Conductor}{May 2013---Present}{Software Engineer, Senior Software Engineer}
     \begin{achievements}
+    \item Design and develop systems of services with robustness, scalability, and ease-of-deployment in mind
+    \item Led project to migrate JavaScript off of legacy bundling system on to modern modules
+    \item Identify and address core problems with existing code to enhance developer productivity
+    \item Prototype possibilities for new features and work with Product team to fully develop them
+    \item Develop open-source code to help Conductor and the larger programming community
     \item Pioneer new client-side architecture for large-scale web app, prioritizing ease of development and maintainability
-    \item Write exercises and documentation for new hire training and general knowledge sharing
+    \item Write exercises and documentation for new hire training and general knowledge distribution
     \item Provide tools and scripts to enable customer support and reduce strain for on-call engineer
     \end{achievements}
 
 \employer{Lockheed Martin}{August 2012---May 2013}{Software Engineer Asc.}
     \begin{achievements}
-    \item Used JavaScript, CSS, C\#, and ASP.NET for development of dynamic database-backed web pages
     \item Optimized speed of web content delivery through testing and profiling
     \item Developed behavior-driven-development library to help ensure project stability
     \item Encouraged and assisted in adherence to coding standards to enhance project maintainability
@@ -84,10 +87,6 @@
     \end{achievements}
 
 
-\header{Education}
-\school{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor}
-{Cumulative GPA: 3.48/4.00}
-
 \header{Projects}
 
 \project{backbone.hoard}{https://github.com/cmaher/backbone.hoard}{JavaScript}
@@ -97,6 +96,22 @@
     \item Developed to support a system making potentially many duplicate XHRs in short succession
     \end{achievements}
 
+
+\project{backbone.marionette}{https://github.com/marionettejs/backbone.marionette}{JavaScript}
+    \begin{achievements}
+    \item The Backbone Framework. A set of libraries and patterns for easier Backbone application development
+    \item Contribute code and discussion of future development
+    \item Assist the community on the gitter and at Marionette Meetups
+    \item Worked on Chrome DevTools extension for inspecting Marionette applications
+    \end{achievements}
+
+
+\project{ac\_control}{https://github.com/cmaher/ac\_control}{Arduino C}
+    \begin{achievements}
+    \item Firmware for the Particle Photon to enable control of my air conditioner over the internet
+    \item Blogged about the project experience (\url{http://cmaher.github.io/posts/developing-with-the-particle-photon/})
+    \end{achievements}
+
 \project{Flexsym}{https://github.com/cmaher/flexsym}{Ruby}
     \begin{achievements}
     \item An automata-based Turing-tarpit programming language for building non-deterministic Turing machines
@@ -104,42 +119,23 @@
     \item Interprets the AST in a Ruby-powered runtime environment to process states, stepping through non-deterministic branches in parallel
     \end{achievements}
 
-\project{backbone.marionette}{https://github.com/marionettejs/backbone.marionette}{JavaScript}
-    \begin{achievements}
-    \item The Backbone Framework. A set of libraries and patterns for easier Backbone application development
-    \item Contribute code and discussion of future development
-    \item Assist the community on the gitter and at Marionette Meetups
-    \item Working on Chrome DevTools extension for inspecting Marionette applications (\url{https://github.com/MarionetteLabs/marionette.inspector})
-    \end{achievements}
 
 \project{Bandit}{https://github.com/cmaher/bandit}{Ruby}
     \begin{achievements}
     \item Multi-armed bandit framework for Rails; forked from bmuller/bandit
     \item Provided Softmax algorithm implementation
-    \item Added support for cascading configuration options
-    \item Contributed documentation and tests for developed features
     \end{achievements}
 
 
-\project{SGAS}{https://github.com/cmaher/sgas}{Java}
-    \begin{achievements}
-    \item A simple game to teach basic principles of game architecture and development
-    \item Used in a Penn State ACM student workshop prior to a game-programming competition
-    \item Decouples the main game engine for reuse by other students
-    \end{achievements}
+\header{Education}
+\school{The Pennsylvania State University---University Park}{August 2008---May 2012}{B.S. Computer Science, B.S. Mathematics, Japanese Minor}
+{Cumulative GPA: 3.48/4.00}
 
-
-\project{Biscuit}{https://github.com/PennState-ACM/PennState-ACM-Biscuit}{C}
-    \begin{achievements}
-    \item An API for the iRobot Create to simplify programming
-    \item Created code for initialization and buffer communication
-    \item Provided API design guidance
-    \end{achievements}
 
 \header{Skills and Interests (For the Robots)}
-    \skill{JavaScript $\cdot$ Ruby $\cdot$ Java $\cdot$ Scala $\cdot$ Haskell
-      $\cdot$ SQL $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ Backbone $\cdot$ Marionette
-      $\cdot$ Rails }
+    \skill{JavaScript $\cdot$ Ruby $\cdot$ Java $\cdot$ Scala $\cdot$ Clojure
+      $\cdot$ SQL $\cdot$ CSS3 $\cdot$ HTML5 $\cdot$ Backbone $\cdot$ React
+      $\cdot$ Arduino }
 
 
 \end{document}
